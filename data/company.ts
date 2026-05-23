@@ -13,6 +13,7 @@ export interface CompanyStats {
 export interface CompanyContact {
   email: string;
   phone: string;
+  phone2?: string;
   address: string;
   city: string;
   socialLinks: {
@@ -66,13 +67,13 @@ export const company: CompanyData = {
     teamMembers: 25,
   },
   contact: {
-    email: 'contact@cabinetgc.ma',
-    phone: '+212 522-000000',
-    address: '123 Boulevard Mohammed V',
-    city: 'Casablanca',
+    email: 'stecgctaghzout@gmail.com',
+    phone: '+212 671 96 19 41',
+    phone2: '+212 525 06 78 43',
+    address: 'N°11, 1er étage, Imm Amanar, Av Mohamed V',
+    city: 'Inezgane',
     socialLinks: {
-      facebook: 'https://facebook.com/cabinetgc',
-      linkedin: 'https://linkedin.com/company/cabinetgc',
+      facebook: 'https://web.facebook.com/AbdellahCabinet/',
     },
   },
 };

@@ -29,9 +29,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  // Show first 3 services in the preview
-  const previewServices = services.slice(0, 3);
-
   return (
     <>
       {/* Hero Section - Full-width with gradient overlay */}
@@ -83,7 +80,7 @@ export default function Home() {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {previewServices.map((service, index) => (
+          {services.map((service, index) => (
             <ScrollReveal key={service.id} delay={index * 100}>
               <ServiceCard
                 title={service.title}
@@ -96,14 +93,6 @@ export default function Home() {
             </ScrollReveal>
           ))}
         </div>
-
-        <ScrollReveal delay={300}>
-          <div className="text-center mt-10">
-            <Button variant="outline" href="/services">
-              Découvrir tous nos services
-            </Button>
-          </div>
-        </ScrollReveal>
       </SectionWrapper>
 
       {/* About Preview Section */}

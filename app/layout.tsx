@@ -3,6 +3,7 @@ import { Playfair_Display, Poppins } from 'next/font/google';
 import TopBar from '@/components/TopBar';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import '@/styles/globals.css';
 
 const playfairDisplay = Playfair_Display({
@@ -48,6 +49,7 @@ export default function RootLayout({
         </header>
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
