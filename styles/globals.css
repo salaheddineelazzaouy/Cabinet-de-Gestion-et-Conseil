@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Font Families */
+    --font-family-serif: var(--font-serif), Georgia, serif;
+    --font-family-sans: var(--font-sans), system-ui, sans-serif;
+
+    /* Gold Theme */
+    --color-gold: #C9A227;
+    --color-gold-light: #D4B44A;
+    --color-gold-dark: #A8871F;
+    --color-gold-text: #7A6515; /* Accessible gold for normal text on white (4.5:1+) */
+    --color-dark: #1A1A1A;
+    --color-dark-light: #2D2D2D;
+    --color-white: #FFFFFF;
+
+    /* Typography Scale */
+    --font-size-heading-xl: 3rem;
+    --font-size-heading-lg: 2.25rem;
+    --font-size-heading-md: 2rem;
+    --font-size-subheading: 1.375rem;
+    --font-size-body-lg: 1.125rem;
+    --font-size-body: 1rem;
+
+    --line-height-heading: 1.2;
+    --line-height-subheading: 1.4;
+    --line-height-body: 1.6;
+
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+    --font-weight-normal: 400;
+
+    /* Spacing */
+    --spacing-section: 48px;
+    --spacing-container-padding: 24px;
+    --spacing-container-padding-mobile: 16px;
+    --max-width-container: 1280px;
+
+    /* Transitions */
+    --transition-fast: 150ms;
+    --transition-base: 250ms;
+    --transition-slow: 300ms;
+
+    /* Border Radius */
+    --radius-button: 6px;
+  }
+
+  /* Smooth scroll for in-page navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    color: var(--color-dark);
+    background-color: var(--color-white);
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-family-serif);
+  }
+}
+
+/* Disable non-essential animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Global focus-visible styles for keyboard accessibility */
+@layer base {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid var(--color-gold-dark);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
